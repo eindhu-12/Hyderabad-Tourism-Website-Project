@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./pictures/Favicon" type="image/.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    
+    <link rel="stylesheet" href="Hyd.css">
+</head>
+
+<body>
+    <header>
+        <div id="titlediv">
+            <img id="iconimg" src="./pictures/Icon-1.png" alt="">
+            <span id="title">Go Hyderabad</span>
+        </div>
+        <div id="sch">
+            <input type="search" id="searchbtn" placeholder="Search...">
+            <span id="searchicon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+
+        <button id="signIN">sign In</button>
+            <!-- ------------------------------------------login---------------------- -->
+    <div id="loginContainer" class="login_Form">
+        <div id="login_inner_div">
+        <form action="" id="loginForm">
+            <div id="signIn_title">Log In</div>
+            <input type="email" name="" id="loginmail" placeholder="Email" required><br><br>
+            <input type="password" name="" id="loginpswd" placeholder="Password" required><br>
+            <br>
+            <button type="submit" id="logbtn">Login</button><br><br>
+            <span>Don't have Account ?<a href="" id="signIn_to_SignUp">Sign Up</a></span>
+        </form>
+    </div>
+    </div>
+    <!-- -----------------------------signUp----------------------- -->
+    <div id="signin">
+        <div id="signin_inner_div" class="signup_Form">
+            <form action="" id="formValid" onclick="">
+                <div id="signUp_title">Sign Up</div>
+                <input type="text" name="name" id="signup_name" placeholder="Name" required><br>
+                <span id="nameerr"></span><br>
+                <input type="email" name="mail" id="signup_mail" placeholder="Email" required><br>
+                <span id="mailerr"></span>
+                <br>
+                <input type="password" name="pswd" id="signup_pswd" placeholder="password" required><br>
+                <span id="pswderr"></span>
+                <br>
+                <button id="signup_btn" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    </header>
+    <!-- ./pictures/0-HYD Frontpic.jpg -->
+<!-- ----------------------------------------GRID----------------------------------------------------- -->
+    <div id="frontimgdiv">
+        <img src="./pictures/0-HYD Frontpic.jpg" alt="" id="frontimg">
+    </div>
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+    <div id="hydContent">
+        <div id="firstColumnBackground"></div>
+        <img id="colorcharminar" src="./pictures/charminar color pic.jpg" alt="">
+        <div id="hydContentinner">Experience Hyderabad, where history and modernity unite! Wander through the iconic Charminar and Golconda Fort, savor the world-famous biryani, and explore vibrant markets. From royal palaces to bustling tech hubs, this City of Pearls offers timeless charm and unforgettable memories. Discover Hyderabad's magic today!</div>
+        <div id="quote"></div>
+    </div>
+<!-- -------------------------------------------------carousel-1----------------------------------------------------- -->
+
+ <div id="Insiteplaces">
+    Hyderabad Insite Places
+ </div>
+
+ <div class="container-fluid">
+    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3" id="mediaQuries">
+                        <div id="chowmalla-card" class="card">
+                            <img class="placePhoto" src="./pictures/chowmalla palace.webp" alt="Card 1">
+                            <div class="placeText">Chowmalla Palace</div>
+                            <p class="placeDescription">Timeless elegance echoing Hyderabad's royal heritage.</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="golconda-card" class="card">
+                            <img class="placePhoto" src="./pictures/golconda pic.jpeg" alt="Card 2">
+                            <div class="placeText">Golconda Fort</div>
+                            <p class="placeDescription">Majestic ruins whispering tales of timeless valor.</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="hussain-sagar-card" class="card">
+                            <img class="placePhoto" src="./pictures/hussain-sagar-lake.jpg" alt="Card 3">
+                            <div class="placeText">Hussain Sagar</div>
+                            <p class="placeDescription">Serene waters embracing Hyderabad's iconic charm.</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="charminar-card" class="card">
+                            <img class="placePhoto"src="./pictures/charminarcard" alt="Card 4">
+                            <div class="placeText">Charminar</div>
+                            <p class="placeDescription">Timeless symbol of Hyderabad's rich culture and history</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div id="Mecca-Masjid-card" class="card">
+                            <img class="placePhoto" src="./pictures/Mecca masjid.jpg" alt="Card 5">
+                            <div class="placeText">Mecca Masjid</div>
+                            <p class="placeDescription">Sacred serenity reflecting Hyderabad's spiritual grandeur</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Jagannath-Temple-card" class="card">
+                            <img class="placePhoto" src="./pictures/Jagannath_Temple_Hyderabad_nightView.jpg" alt="Card 1">
+                            <div class="placeText">Jagannath Temple</div>
+                            <p class="placeDescription">Divine artistry uniting faith and cultural splendor</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div  class="col-md-3">
+                        <div id="Salarjung-Museum-card" class="card">
+                            <img class="placePhoto" src="./pictures/Salarjung-Museum-hyd.webp" alt="Card 1">
+                            <div class="placeText">Salarjung-Museum</div>
+                            <p class="placeDescription">Timeless treasures showcasing global art and history</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="shilparamam-card" class="card">
+                            <img class="placePhoto" src="./pictures/shilparamam-hyderabad-hitech.jpg" alt="Card 1">
+                            <div  class="placeText">Shilparamam</div>
+                            <p class="placeDescription">Vibrant haven celebrating India's art, crafts, and culture</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div><br>
+<!-- -------------------------------------------------carousel-2----------------------------------------------------- -->
+
+<div id="OutSkirts">Hyderabad OutSkirts</div>
+<div class="container-fluid">
+    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div  id="ramoji-film-card" class="card">
+                            <img class="placePhoto" src="./pictures/ramoji-film-city.jpg" alt="Card 6">
+                            <div class="placeText">Ramoji Film City</div>
+                            <p class="placeDescription">Magical world where imagination meets cinematic grandeur</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="gandikota-card" class="card">
+                            <img class="placePhoto" src="./pictures/2-gandikota" alt="Card 1">
+                            <div class="placeText">Gandikota</div>
+                            <p class="placeDescription">Majestic canyon where nature's beauty meets serene landscapes</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Jalavihar-card" class="card">
+                            <img class="placePhoto" src="./pictures/2-Jalavihar" alt="Card 1">
+                            <div class="placeText">Jalavihar</div>
+                            <p class="placeDescription">Splashing fun and joy by Hyderabad's serene waters</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="medak-chruch-card" class="card">
+                            <img class="placePhoto" src="./pictures/2-medak chruch" alt="Card 1">
+                            <div class="placeText">Medak Church</div>
+                            <p class="placeDescription">Awe-inspiring architecture embracing peace and divine grace</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    
+                    <div class="col-md-3">
+                        <div id="Swarnagiri-Temple-card" class="card">
+                            <img class="placePhoto" src="./pictures/2-R_Swarnagiri_Temple" alt="Card 5">
+                            <div class="placeText">Swarnagiri Temple</div>
+                            <p class="placeDescription">A golden hill echoing tranquility and divine blessings</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Yadagirigutta-card" class="card">
+                            <img class="placePhoto" src="./pictures/2-Yadagirigutta" alt="Card 1">
+                            <div class="placeText">Yadagirigutta</div>
+                            <p class="placeDescription">Sacred hill embodying Lord Narasimha's grace and serenity.</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Rachakonda-Fort-card" class="card">
+                            <img class="placePhoto" src="./pictures/2-Rachakonda Fort" alt="Card 1">
+                            <div class="placeText">Rachakonda Fort</div>
+                            <p class="placeDescription">A scenic blend of ruggedness and cultural heritage</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Ammapalli-Temple-card" class="card">
+                            <img class="placePhoto" src="./pictures/2-Ammapalli-Temple" alt="Card 1">
+                            <div class="placeText">Ammapalli Temple</div>
+                            <p class="placeDescription">Ancient charm radiating devotion and architectural beauty</p>
+                            <div class="explorebtn">Explore-></div>
+                            <!-- <a class="explorebtn" href="">Explore-></a> -->
+
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div><br>
+<!-- -------------------------------------------------carousel-3----------------------------------------------------- -->
+<div id="restaurants">Hyderabad Famous Restaurants </div>
+<div class="container-fluid">
+    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div id="Barbeque-Spices-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-Barbeque Spices.jpg" alt="Card 6">
+                            <div class="placeText">Barbeque Spices</div>
+                            <p class="placeDescription">Sizzling grills and flavorful feasts for every mood</p>
+                            <!-- <div class="explorebtn">Explore-></div> -->
+                            <div class="explorebtn">Explore-></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="bawarchi-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-bawarchi-indian-restaurant" alt="Card 1">
+                            <div class="placeText">Bawarchi</div>
+                            <p class="placeDescription">Legendary flavors of biryani that capture Hyderabad's soul.</p>
+                            <!-- <div class="explorebtn">Explore-></div> -->
+                            <div class="explorebtn" >Explore-></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Fisherman's-Wharf-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-Fisherman's Wharf" alt="Card 1">
+                            <div class="placeText">Fisherman's Wharf</div>
+                            <p class="placeDescription">Coastal charm serving seafood with a Goan twist</p>
+                            <!-- <div class="explorebtn">Explore-></div> -->
+                            <div class="explorebtn">Explore-></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="platform 65-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-platform 65" alt="Card 1">
+                            <div class="placeText">Platform 65</div>
+                            <p class="placeDescription">Unique train-themed dining serving food with delightful vibes</p>
+                            <!-- <div class="explorebtn">Explore-></div> -->
+                            <div class="explorebtn">Explore-></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    
+                    <div class="col-md-3">
+                        <div id="pista house-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-pista house" alt="Card 5">
+                            <div class="placeText">Pista House</div>
+                            <p class="placeDescription">Delightful destination for authentic Hyderabadi biryani cravings</p>
+                            <div class="explorebtn" >Explore-></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Flechazo-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-Flechazo" alt="Card 1">
+                            <div class="placeText">Flechazo</div>
+                            <p class="placeDescription">Fusion of global cuisines creating an unforgettable dining experience</p>
+                            <div class="explorebtn">Explore-></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="Mehfil-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-Mehfil restaurant" alt="Card 1">
+                            <div class="placeText">Mehfil</div>
+                            <p class="placeDescription">Perfect blend of royal ambiance and irresistible culinary delights</p>
+                            <div class="explorebtn">Explore-></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="swagath-card" class="card">
+                            <img class="placePhoto" src="./pictures/3-swagath.webp" alt="Card 1">
+                            <div class="placeText">Swagath</div>
+                            <p class="placeDescription">Elegant spot for South Indian flavors and warm hospitality</p>
+                            <div class="explorebtn">Explore-></div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div><br>
+<!-- ----------------------------------------------POPUP------------------------------------------------------- -->
+<div id="popUp" class="hidden">
+    <div id="placeName">Hyd</div>
+    <div id="gridDiv">
+        <img id="popUpImg" src="./pictures/charminar color pic.jpg" alt="Image">
+        <div id="placeDetails">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button id="Acc_TextOne" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Ticket Price
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Cost of Ticket
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button id="Acc_TextTwo" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Food Price
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div  class="accordion-body">Food pricing details go here.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button id="Acc_TextThree" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Timings
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Timings details go here.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Map">
+        <iframe id="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6894.043101678295!2d78.6782698901514!3d17.311553340387007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb40b519338fe8b%3A0x903d57f7eb08e0ad!2sGandikota%2C%20Andhra%20Pradesh!5e1!3m2!1sen!2sin!4v1733157235391!5m2!1sen!2sin" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    <button id="closePopUp">Close</button>
+</div>
+<!-- -----------------------------------------------------Footer-------------------------------------------------- -->
+
+ <footer>
+    <div id="footerdiv">
+        <div id="footerdiv1">
+            <div id="footericon"><img id="iconpic" src="./pictures/Icon-1.png" alt=""></div>
+        <div id="footertitle"> Go Hyderabad</div>
+        </div>
+        <div id="socialmedia">
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <span>https://www.instagram.com/Hyd_Tourism</span>
+            </div>
+            <div>
+                <i class="fa-brands fa-facebook"></i> 
+                <span>https://www.facebook.com/Hyd_Tourism</span>
+            </div>
+            <div>
+                <i class="fa-brands fa-twitter"></i> 
+                <span>https://twitter.com/Hyd_Tourism</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i> 
+                <span>hyderabadtourism@gmail.com</span>
+            </div>
+            <div><i class="fa-solid fa-phone"></i> 
+                <span>+919786457621</span>
+            </div>
+        </div>
+        <div id="footerImg">
+            <img id="fImg" src="./pictures/0-black and white.jpg" alt="">
+        </div>
+    </div>
+    
+ </footer>
+  <!-- ------------------------------------------------------------------------------------------------------- -->
+   
+    <script src="hydTour.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
+
+</body>
+
+</html>

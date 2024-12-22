@@ -621,6 +621,24 @@ header {
 #close_btn i{
     font-size: 0.9rem;
 }
+/* -------------------------------------------Error popup------------------------------ */
+#Error_popup{
+    display: none;
+    width: 35%;
+    font-family:"Trirong", serif;
+    background-color: #faf7f5;
+    box-shadow: 0 4px 15px rgba(22, 21, 21, 0.2);
+    border-radius: 0.7rem;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000000;
+}
 /* ---------------------------------------Footer---------------------------------------- */
 footer {
     height: 10rem;

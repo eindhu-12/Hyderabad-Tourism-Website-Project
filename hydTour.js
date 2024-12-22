@@ -137,30 +137,48 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Sign Up successful! Redirecting to login...");
                 signUpFormContainer.style.display = "none";
                 loginFormContainer.style.display = "block";
+
             }
         });
     }
     
 
 // --------------------------Login Form---------------------------------------
+    let err_block=document.getElementById("Error_popup");
+    let  Err_icon=document.getElementById("ErrorIcon");
+    let Msg=document.getElementById("Message");
+    let ErrDescrip=document.getElementById("errorDesc")
     if (loginForm) {
         loginForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
             const savedMail = localStorage.getItem("mailVerify");
             const savedPswd = localStorage.getItem("pswdVerify");
-            const loginMail = document.getElementById("loginmail").value.trim();
-            const loginPswd = document.getElementById("loginpswd").value.trim();
-
+            const loginMailEle = document.getElementById("loginmail")
+            const loginPswdEle = document.getElementById("loginpswd")
+            const loginMail=loginMailEle.value.trim();
+            const loginPswd=loginPswdEle.value.trim();
             if (loginMail === savedMail && loginPswd === savedPswd) {
                 alert("Login successful!");
                 loginFormContainer.style.display = "none";
                 document.body.style.overflow="auto";
             } else {
-                alert("Invalid credentials! Please try again.");
+                // alert("Invalid credentials! Please try again.");
+                    err_block.style.display="block";
+                    Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
+                    CloseErr.addEventListener("click", function () {
+                        err_block.style.display="none";
+                        loginMailEle.value = "";
+                        loginPswdEle.value= "";
+                        
+                    } );
+                    
             }
+            
         });
+        
     }
+    
 });
 
 // ----------------------------------------------POPUP-----------------------------------------
@@ -481,7 +499,6 @@ document.addEventListener("DOMContentLoaded", function () {
             about_place.innerHTML="No information available for this place";
         }
         ExtraInfo.style.display="block";
-        console.log("det:-",details)
         
     });
 

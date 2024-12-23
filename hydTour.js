@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("pswderr").textContent = "";
 
             if (!nameExp.test(name)) {
+                
                 document.getElementById("nameerr").textContent = "Please enter at least 2 characters.";
                 valid = false;
             }
@@ -126,8 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 valid = false;
             }
             if (!pswdExp.test(pswd)) {
-                document.getElementById("pswderr").textContent =
-                    "Password must be 8-15 characters with at least one uppercase letter, one lowercase letter, one number, and one special character.";
+                err_block.style.display="block";
+                // Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
+                Msg.textContent="PasswordValidationError"  ;
+                ErrDescrip.innerHTML=`8-15 Characters<br>at least 1 uppercase<br>at least 1 lowercase letter<br>at least 1 Number<br>at least 1 Special Character`;
+                // document.getElementById("pswderr").textContent ="Password must be 8-15 characters with at least one uppercase letter, one lowercase letter, one number, and one special character.";
                 valid = false;
             }
 
@@ -139,13 +143,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 loginFormContainer.style.display = "block";
 
             }
+            CloseErr.addEventListener("click", function Cls() {
+                err_block.style.display="none";
+            } );
         });
     }
     
 
 // --------------------------Login Form---------------------------------------
     let err_block=document.getElementById("Error_popup");
-    let  Err_icon=document.getElementById("ErrorIcon");
+    let Err_icon=document.getElementById("ErrorIcon");
     let Msg=document.getElementById("Message");
     let ErrDescrip=document.getElementById("errorDesc")
     if (loginForm) {
@@ -162,18 +169,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Login successful!");
                 loginFormContainer.style.display = "none";
                 document.body.style.overflow="auto";
-            } else {
-                // alert("Invalid credentials! Please try again.");
+            } 
+            else if(loginMail === savedMail && loginPswd != savedPswd){
+                err_block.style.display="block";
+                Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
+                Msg.textContent="Invalid Password"  ;
+                ErrDescrip.textContent="Password is Not Matched ! Please try again";
+            }
+            else {
                     err_block.style.display="block";
                     Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
-                    CloseErr.addEventListener("click", function () {
-                        err_block.style.display="none";
-                        loginMailEle.value = "";
-                        loginPswdEle.value= "";
-                        
-                    } );
-                    
+                    Msg.textContent="User Not Found"  ;
+                    ErrDescrip.textContent="Invalid credentials! Please try again";
             }
+            CloseErr.addEventListener("click", function Cls() {
+                err_block.style.display="none";
+                loginMailEle.value = "";
+                loginPswdEle.value= "";
+                
+            } );
             
         });
         

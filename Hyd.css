@@ -646,20 +646,15 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px green solid;
+    border: 1px red solid;
     border-radius: 50%;
     width: 6rem;
     height:6rem;
 }
 #ErrorIcon:hover{
-    border: 2px skyblue solid;
+    border: 4px red solid;
 }
-.green-tick{
-    color: green;
-    font-size: 4rem;
-}
-.red-cross{
-    color: red;
+#ErrorIcon i{
     font-size: 4rem;
 }
 

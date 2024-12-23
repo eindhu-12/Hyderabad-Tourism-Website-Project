@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loginFormContainer.style.display = "none";
         signUpFormContainer.style.display = "block";
     });
-
+    formBlock=false;
     if (signUpForm) {
         signUpForm.addEventListener("submit", (event) => {                  //signUp
             event.preventDefault();
@@ -119,37 +119,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!nameExp.test(name)) {
                 err_block.style.display="block";
+                err_block.style.borderColor="red";
+                Err_icon.innerHTML=`<i id="cross" class="fa-solid fa-x"></i>` ;
+                cross_sbl=document.getElementById("cross");
+                cross_sbl.style.color="red";
+
                 Msg.textContent="User Name Validation Error"  ;
                 ErrDescrip.textContent="Please enter at least 2 characters";
                 // document.getElementById("nameerr").textContent = "Please enter at least 2 characters.";
                 valid = false;
+                signUpFormContainer.style.display = "none";
+
             }
             if (!emailExp.test(mail)) {
                 err_block.style.display="block";
+                err_block.style.borderColor="red";
+                Err_icon.innerHTML=`<i id="cross" class="fa-solid fa-x"></i>` ;
+                cross_sbl=document.getElementById("cross");
+                cross_sbl.style.color="red";
+                
                 Msg.textContent="Email Validation Error"  ;
                 ErrDescrip.textContent="Please enter a valid email.";
                 // document.getElementById("mailerr").textContent = "Please enter a valid email.";
                 valid = false;
+                signUpFormContainer.style.display = "none";
+
             }
             if (!pswdExp.test(pswd)) {
                 err_block.style.display="block";
-                // Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
+                err_block.style.borderColor="red";
+                Err_icon.innerHTML=`<i id="cross" class="fa-solid fa-x"></i>` ;
+                cross_sbl=document.getElementById("cross");
+                cross_sbl.style.color="red";
                 Msg.textContent="Password Validation Error"  ;
                 ErrDescrip.innerHTML=`8-15 Characters<br>at least 1 uppercase<br>at least 1 lowercase letter<br>at least 1 Number<br>at least 1 Special Character`;
                 // document.getElementById("pswderr").textContent ="Password must be 8-15 characters with at least one uppercase letter, one lowercase letter, one number, and one special character.";
                 valid = false;
+                signUpFormContainer.style.display = "none";
             }
 
             if (valid) {
                 localStorage.setItem("mailVerify", mail);
                 localStorage.setItem("pswdVerify", pswd);
-                alert("Sign Up successful! Redirecting to login...");
+
+                err_block.style.display="block";
+                Err_icon.innerHTML=`<i id="tick" class="fa-solid fa-check"></i>` ;
+                Err_icon.style.borderColor="green"
+                tick_sbl=document.getElementById("tick");
+                tick_sbl.style.color="green",
+                
+                Msg.textContent="SignUp Suceesful"  ;
+                ErrDescrip.textContent="Redirecting to LogIn Page"
+
                 signUpFormContainer.style.display = "none";
-                loginFormContainer.style.display = "block";
 
             }
-            CloseErr.addEventListener("click", function Cls() {
+            CloseErr.addEventListener("click", function () {
                 err_block.style.display="none";
+                
+                if(valid){
+                    document.getElementById("signup_name").value="";
+                    document.getElementById("signup_mail").value="";
+                    document.getElementById("signup_pswd").value="";
+                    loginFormContainer.style.display = "block";
+
+                }
+                else{
+                    signUpFormContainer.style.display = "block";
+                }
             } );
         });
     }
@@ -174,35 +211,53 @@ document.addEventListener("DOMContentLoaded", () => {
             if (loginMail === savedMail && loginPswd === savedPswd) {
                 err_block.style.display="block";
                 Err_icon.innerHTML=`<i id="tick" class="fa-solid fa-check"></i>` ;
+                Err_icon.style.borderColor="green"
                 tick_sbl=document.getElementById("tick");
-                tick_sbl.classList.add("green-tick");
+                tick_sbl.style.color="green",
                 
-                Msg.textContent="User Not Found"  ;
+                Msg.textContent="Login Suceesful"  ;
                 ErrDescrip.textContent="Invalid credentials! Please try again";
                 loginFormContainer.style.display = "none";
                 document.body.style.overflow="auto";
+                formBlock=true;
             } 
             else if(loginMail === savedMail && loginPswd != savedPswd){
                 err_block.style.display="block";
-                Err_icon.innerHTML=`<i id="cross class="fa-solid fa-x"></i>` ;
+                Err_icon.innerHTML=`<i id="cross" class="fa-solid fa-x"></i>` ;
+                Err_icon.style.borderColor="red",
                 cross_sbl=document.getElementById("cross");
-                cross_sbl.classList.add("red-cross");
+                cross_sbl.style.color="red";
+
                 Msg.textContent="Invalid Password"  ;
                 ErrDescrip.textContent="Password is Not Matched ! Please try again";
+                loginFormContainer.style.display = "none";
+                formBlock=false;
+
             }
             else {
                     err_block.style.display="block";
                     Err_icon.innerHTML=`<i id="cross" class="fa-solid fa-x"></i>` ;
+                    Err_icon.style.borderColor="red",
                     cross_sbl=document.getElementById("cross");
-                    cross_sbl.classList.add("red-cross"); ///access in .CSS
+                    cross_sbl.style.color="red";
+
                     Msg.textContent="User Not Found"  ;
                     ErrDescrip.textContent="Invalid credentials! Please try again";
+                    loginFormContainer.style.display = "none";
+                    formBlock=false;
+
+
             }
-            CloseErr.addEventListener("click", function Cls() {
+            CloseErr.addEventListener("click", function () {
                 err_block.style.display="none";
                 loginMailEle.value = "";
                 loginPswdEle.value= "";
-                
+                Err_icon.style.borderColor="";
+                if(formBlock===true){
+                    loginFormContainer.style.display = "none";
+                }else{
+                    loginFormContainer.style.display = "block";
+                }
             } );
             
         });

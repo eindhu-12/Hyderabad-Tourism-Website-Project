@@ -551,6 +551,7 @@ header {
     justify-content: center;
     align-items: center;
     animation:0.3s ease-in-out;
+    font-family:"Trirong", serif;
     
 }
 #detailsPopup{
@@ -638,7 +639,31 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10000000;
+    font-family:"Trirong", serif;
 }
+
+#ErrorIcon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px green solid;
+    border-radius: 50%;
+    width: 6rem;
+    height:6rem;
+}
+#ErrorIcon:hover{
+    border: 2px skyblue solid;
+}
+.green-tick{
+    color: green;
+    font-size: 4rem;
+}
+.red-cross{
+    color: red;
+    font-size: 4rem;
+}
+
+
 /* ---------------------------------------Footer---------------------------------------- */
 footer {
     height: 10rem;

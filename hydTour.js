@@ -118,18 +118,23 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("pswderr").textContent = "";
 
             if (!nameExp.test(name)) {
-                
-                document.getElementById("nameerr").textContent = "Please enter at least 2 characters.";
+                err_block.style.display="block";
+                Msg.textContent="User Name Validation Error"  ;
+                ErrDescrip.textContent="Please enter at least 2 characters";
+                // document.getElementById("nameerr").textContent = "Please enter at least 2 characters.";
                 valid = false;
             }
             if (!emailExp.test(mail)) {
-                document.getElementById("mailerr").textContent = "Please enter a valid email.";
+                err_block.style.display="block";
+                Msg.textContent="Email Validation Error"  ;
+                ErrDescrip.textContent="Please enter a valid email.";
+                // document.getElementById("mailerr").textContent = "Please enter a valid email.";
                 valid = false;
             }
             if (!pswdExp.test(pswd)) {
                 err_block.style.display="block";
                 // Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
-                Msg.textContent="PasswordValidationError"  ;
+                Msg.textContent="Password Validation Error"  ;
                 ErrDescrip.innerHTML=`8-15 Characters<br>at least 1 uppercase<br>at least 1 lowercase letter<br>at least 1 Number<br>at least 1 Special Character`;
                 // document.getElementById("pswderr").textContent ="Password must be 8-15 characters with at least one uppercase letter, one lowercase letter, one number, and one special character.";
                 valid = false;
@@ -151,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
 // --------------------------Login Form---------------------------------------
+
     let err_block=document.getElementById("Error_popup");
     let Err_icon=document.getElementById("ErrorIcon");
     let Msg=document.getElementById("Message");
@@ -166,19 +172,29 @@ document.addEventListener("DOMContentLoaded", () => {
             const loginMail=loginMailEle.value.trim();
             const loginPswd=loginPswdEle.value.trim();
             if (loginMail === savedMail && loginPswd === savedPswd) {
-                alert("Login successful!");
+                err_block.style.display="block";
+                Err_icon.innerHTML=`<i id="tick" class="fa-solid fa-check"></i>` ;
+                tick_sbl=document.getElementById("tick");
+                tick_sbl.classList.add("green-tick");
+                
+                Msg.textContent="User Not Found"  ;
+                ErrDescrip.textContent="Invalid credentials! Please try again";
                 loginFormContainer.style.display = "none";
                 document.body.style.overflow="auto";
             } 
             else if(loginMail === savedMail && loginPswd != savedPswd){
                 err_block.style.display="block";
-                Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
+                Err_icon.innerHTML=`<i id="cross class="fa-solid fa-x"></i>` ;
+                cross_sbl=document.getElementById("cross");
+                cross_sbl.classList.add("red-cross");
                 Msg.textContent="Invalid Password"  ;
                 ErrDescrip.textContent="Password is Not Matched ! Please try again";
             }
             else {
                     err_block.style.display="block";
-                    Err_icon.innerHTML=`<i class="fa-solid fa-x"></i>` ;
+                    Err_icon.innerHTML=`<i id="cross" class="fa-solid fa-x"></i>` ;
+                    cross_sbl=document.getElementById("cross");
+                    cross_sbl.classList.add("red-cross"); ///access in .CSS
                     Msg.textContent="User Not Found"  ;
                     ErrDescrip.textContent="Invalid credentials! Please try again";
             }

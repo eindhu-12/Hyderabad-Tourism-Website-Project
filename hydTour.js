@@ -366,7 +366,7 @@ let placeDetails={
         About_Place:`<b>RAMOJI FILM CITY</b> in <b>HYDERABAD</b> is the world's largest integrated film studio complex. Established in <b>1996</b>, it sprawls across over <b>2,000 acres</b> and houses a diverse range of film production facilities. The complex boasts a variety of SETS replicating various historical and contemporary locations, including ancient Indian kingdoms, European cities, and futuristic landscapes.<br><br>
         The film city offers a unique blend of <b>ENTERTAINMENT</b> and education. Visitors can explore the various film sets, witness live film shoots, and participate in exciting activities like stunt shows and dance performances. The complex also houses a theme park, a convention center, and a luxury hotel, making it a popular tourist destination.  `
     },
-    "gandikota-card":{
+    "Statue_of_equality-card":{
         adultTicketPrice:"₹50 per person",
         childernTicketPrice:"₹50 per person",
         ForeignerTicketPrice:"₹300 per person",

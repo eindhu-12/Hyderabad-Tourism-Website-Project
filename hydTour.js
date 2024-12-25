@@ -1,5 +1,8 @@
 //E1AFD1    , 9DDE8B    729762  859F3D  006A67  219B9D  
-
+let explore_Btn=document.getElementsByClassName("explorebtn");
+for (let btn of explore_Btn) {
+    btn.innerHTML = `Explore <i class="fa-solid fa-arrow-right"></i>`;
+}
 let colorcolor=document.getElementById("")
 let oneQuote=document.getElementById("quote");
 let quotesHYD=["Hyderabad’s charm lies in its rich, diverse heritage","A city where art, history, and talent thrive together","Hyderabad’s soul reflects through its culture, history, and talent","A blend of tradition, innovation, and artistic expression","Hyderabad’s history, culture, and talent create unique magic","Hyderabad, where culture, history, and talent shine together","From Charminar to modern tech, Hyderabad embraces all talents","Hyderabad’s legacy of talent and culture stands eternal","Hyderabad’s landmarks tell stories of a royal past","Hyderabad is where old traditions blend with technology","From the Nizams to modernity, Hyderabad’s journey fascinates","Hyderabad’s streets echo stories of ancient grandeur","Hyderabad’s biryani is a culinary delight, unmatched anywhere","Legacy, culture, and innovation converge in Hyderabad’s heart","Biryani and smiles – the Hyderabad way of life","Hyderabad, a city that fills your heart and plate","Hyderabad’s magic? It’s in the smiles and spices","Hyderabad, where history and heart meet with a smile","From Charminar to biryani, Hyderabad steals your heart"]
@@ -35,7 +38,7 @@ function performSearch() {
         "salarjung museum":"Salarjung-Museum-card",
         "shilparamam":"shilparamam-card",
         "ramoji film city":"ramoji-film-card",      //Outskirts
-        "gandikota":"gandikota-card",
+        "statue of equality":"Statue_of_equality-card",
         "jalavihar":"Jalavihar-card",
         "medak chruch":"medak-chruch-card",
         "swarnagiri temple":"Swarnagiri-Temple-card",
@@ -44,7 +47,7 @@ function performSearch() {
         "ammapalli-temple":"Ammapalli-Temple-card",
         "barbeque spices":"Barbeque-Spices-card",           //resturant
         "bawarchi":"bawarchi-card",
-        "fisherman's-wharf":"Fisherman's-Wharf-card",
+        "paradise":"paradise-card",
         "platform 65":"platform 65-card",
         "pista house":"pista house-card",
         "flechazo":"Flechazo-card",
@@ -76,9 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loginFormContainer.style.display = "none";
     signUpFormContainer.style.display = "none";
 
-
-    let loggedIn=localStorage.getItem("loggedIn");
-
     // if(!loggedIn){
     //     setTimeout(()=>{
     //         loginFormContainer.style.display="block"
@@ -88,9 +88,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
 
     signInButton.addEventListener("click", () => {  //display Login
-        loginFormContainer.style.display = "block";
-        signUpFormContainer.style.display = "none";
-        document.body.style.overflow="hidden";          //scrolling stops
+        if(signInButton.textContent==="Sign Out"){
+            signInButton.textContent="Sign In"
+        }
+        else{
+            let loggedIn=localStorage.getItem("loggedIn");
+            loginFormContainer.style.display = "block";
+            signUpFormContainer.style.display = "none";
+            document.body.style.overflow="hidden";          //scrolling stops
+        }
     });
 
     signUpLink.addEventListener("click", (event) => {//display signUp
@@ -182,6 +188,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.getElementById("signup_mail").value="";
                     document.getElementById("signup_pswd").value="";
                     loginFormContainer.style.display = "block";
+                    signUpFormContainer.style.display = "none";
+
 
                 }
                 else{
@@ -255,6 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Err_icon.style.borderColor="";
                 if(formBlock===true){
                     loginFormContainer.style.display = "none";
+                    signInButton.textContent="Sign Out"
                 }else{
                     loginFormContainer.style.display = "block";
                 }
@@ -367,13 +376,14 @@ let placeDetails={
         The film city offers a unique blend of <b>ENTERTAINMENT</b> and education. Visitors can explore the various film sets, witness live film shoots, and participate in exciting activities like stunt shows and dance performances. The complex also houses a theme park, a convention center, and a luxury hotel, making it a popular tourist destination.  `
     },
     "Statue_of_equality-card":{
-        adultTicketPrice:"₹50 per person",
-        childernTicketPrice:"₹50 per person",
-        ForeignerTicketPrice:"₹300 per person",
+        adultTicketPrice:"₹200 per person",
+        childernTicketPrice:"₹125 per person",
+        ForeignerTicketPrice:"₹1530 per person",
         foodPrice:"400 rupees per person",
-        timings:"6 AM - 6 PM",
-        MapLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6894.043101678295!2d78.6782698901514!3d17.311553340387007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb40b519338fe8b%3A0x903d57f7eb08e0ad!2sGandikota%2C%20Andhra%20Pradesh!5e1!3m2!1sen!2sin!4v1733157235391!5m2!1sen!2sin",
-        // About_Place:``
+        timings:"8 AM - 6 PM",
+        MapLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.3719205985763!2d78.3308186746227!3d17.18576820858314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbb910f959883b%3A0xba967f2e03f099ab!2sStatue%20Of%20Equality%20%7C%20108%20DivyaDesams!5e1!3m2!1sen!2sin!4v1735063456269!5m2!1sen!2sin",
+        About_Place:`The <b>STATUE OF EQUALITY</b> is a magnificent 216-foot-tall golden statue of the 11th-century Indian philosopher RAMANUJA, located near Hyderabad. Unveiled in <b>2022</b>, it commemorates his <b>1000th</b> birth anniversary. Ramanuja was a proponent of <b>SOCIAL EQUALITY</b> and a key figure in <b>VAISHNAVISM</b>.<br><br>
+        The statue stands on a 45-acre complex and features a museum, a research center, and a Vedic library. It is a significant pilgrimage site and a testament to Ramanuja's enduring legacy of promoting inclusivity and spiritual enlightenment.`
     },
     "Jalavihar-card":{
         adultTicketPrice:"₹349 per person",
@@ -455,12 +465,13 @@ let resdetails={
         About_Place:`<b>BAWARCHI</b>, a legendary name in Hyderabad's culinary scene, has been serving authentic Hyderabadi cuisine for over three decades. Established in <b>1987</b>, the restaurant has gained a loyal following for its inimitable flavors and unparalleled quality.<br><br>
         <b>BAWARCHI</b> offers a diverse menu featuring classic Hyderabadi dishes like<b> Biryani, Haleem</b>, and <b>Qubani Ka Meetha</b>. The restaurant boasts multiple branches across Hyderabad, ensuring accessibility for food enthusiasts. The average cost of a meal at BAWARCHI is moderate, making it an affordable option for a delightful dining experience. The restaurant's focus on authentic flavors and generous portions has consistently garnered praise from patrons.`
     },
-    "Fisherman's-Wharf-card":{
-        avgprice:"₹1,800 for two people",
+    "paradise-card":{
+        avgprice:"₹1,000 for two people",
         rating:"4.0",
-        timing:"12pm-11pm",
-        map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.0189525832734!2d78.32921617493525!3d17.41087808348032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb94843eae2847%3A0x5c423ce28f4d1ed0!2sThe%20Fisherman&#39;s%20Wharf!5e0!3m2!1sen!2sin!4v1734269540648!5m2!1sen!2sin",
-        // About_Place:``
+        timing:"11pm-11pm",
+        map:"https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d220545.39576712056!2d78.31450537988326!3d17.364788890982805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparadise!5e1!3m2!1sen!2sin!4v1735065220204!5m2!1sen!2sin",
+        About_Place:`The <b>PARADISE RESTAURANT</b> is a renowned dining destination in <b>HYDERABAD</b>, famous for its delectable Biryani and other South Indian delicacies. Established in <b>1953</b>, it has become a <b>CULINARY INSTITUTION</b>, attracting both locals and tourists alike.<br><br>
+        The restaurant's ambiance is a blend of traditional and modern, offering a comfortable and inviting dining experience. The menu features a wide array of dishes, including signature Biryani varieties like Hyderabadi <b>Biryani</b> and <b>Dum Biryani</b>, along with a selection of South Indian specialties such as <b>Dosas, Idlis</b>, and <b>Vadas</b>. The average price per person is around <b>₹500-₹800</b>.`
     },
     "platform 65-card":{
         avgprice:"₹1,100 for two people ",

@@ -575,7 +575,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 #PlaceName{
     font-size: 1.6rem;
@@ -659,6 +658,7 @@ header {
     font-size: 4rem;
 }
 #Message{
+    font-weight: bold;
     font-size: 1.5rem;
     padding: 0.8rem;
 }
@@ -815,7 +815,23 @@ footer {
     #popUp {
         width: 60%;
     }
-
+    /* -------------------img details------- */
+    #grid_adjust{
+        flex-direction: column;
+    }
+    #Img_popup{
+        width: 52%;
+    }
+    #PlaceName{
+        font-size: 1.4rem;
+    }
+    #aboutPlace{
+        font-size:0.9rem;
+    }
+    /* ---------------------input err popup------------------ */
+    #Error_popup{
+        width: 45%;
+    }
 }
 
 @media screen and (min-width:641px)and (max-width:768px) {
@@ -886,7 +902,7 @@ footer {
 
     #googleMap {
         height: 10rem;
-        width: 24rem;
+        width: 95%;
     }
 
     .placePhoto {
@@ -924,9 +940,30 @@ footer {
     #footerImg {
         display: none;
     }
-
+/* -----------------------img  popup---------- */
     #popUp {
-        width: 60%;
+        width: 70%;
+    }
+    /* --------------img details-------------- */
+    #grid_adjust{
+        flex-direction: column;
+    }
+    #Img_popup{
+        width: 50%;
+    }
+    #close_btn{
+        padding: 1px 4px;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    #close_btn i{
+        font-size: 0.7rem;
+    }
+    #PlaceName{
+        font-size: 1.3rem;
+    }
+    #aboutPlace{
+        font-size:0.8rem;
     }
 
 }
@@ -1035,9 +1072,13 @@ footer {
     #restaurants {
         font-size: 1.3rem;
     }
-
+    .row{
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
     .card {
-        width: 9rem;
+        width: 10.5rem;
         position: relative;
         top: 50%;
         left: 50%;
@@ -1074,15 +1115,15 @@ footer {
     }
 
     .placePhoto {
-        height: 4.5rem;
+        height: 6.5rem;
     }
 
     .placeText {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .placeDescription {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     .explorebtn {
@@ -1090,8 +1131,8 @@ footer {
     }
 
     #googleMap {
-        height: 6rem;
-        width: 15rem;
+        height: 7rem;
+        width: 90%;
     }
 
     #footerdiv {
@@ -1117,14 +1158,64 @@ footer {
     #footerImg {
         display: none;
     }
-
+/* -------------------------------img popup----- */
     #popUp {
-        width: 70%;
+        width: 80%;
+    }
+    /* --------------img details-------------- */
+    #detailsPopup{
+        width: 90%;
+    }
+    #mainImgPopup{
+        width: 100%;
+    }
+    #grid_adjust{
+        flex-direction: column;
+    }
+    #close_btn{
+        padding: 1px 4px;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    #close_btn i{
+        font-size: 0.7rem;
+    }
+    #PlaceName{
+        font-size: 1.2rem;
+    }
+    #aboutPlace{
+        font-size:0.7rem;
     }
 
+    #Img_popup{
+        width: 40%;
+    }
+    /* ---------------input err popup----------------- */
+    #Error_popup{
+        width: 50%;
+    }
+    #ErrorIcon{
+        width: 5rem;
+        height:5rem;
+    }
+    #ErrorIcon:hover{
+        border: 3px red solid;
+    }
+    #ErrorIcon i{
+        font-size: 3rem;
+    }
+    #Message{
+        font-size: 1.3rem;
+    }
+    #errorDesc{
+        padding-bottom:0.7rem;
+    }
+    #CloseErr{
+        font-size: 0.9rem;
+    }
 }
 
-@media screen and (min-width:427px)and (max-width:490px) {
+@media screen and (min-width:427px)and (max-width:491px) {
     #signin {
         max-width: 50rem;
     }
@@ -1242,9 +1333,13 @@ footer {
     #restaurants {
         font-size: 1.3rem;
     }
-
+    .row{
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
     .card {
-        width: 7rem;
+        width: 8.5rem;
         position: relative;
         top: 50%;
         left: 50%;
@@ -1278,11 +1373,11 @@ footer {
     }
 
     .placePhoto {
-        height: 4.5rem;
+        height: 5.5rem;
     }
 
     .placeText {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .placeDescription {
@@ -1292,14 +1387,20 @@ footer {
     .explorebtn {
         font-size: 0.7rem;
     }
-
+    #gridDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     #popUpImg {
-        display: none;
+        width: 60%;
     }
 
     #placeDetails {
-        grid-column: 1/5;
-        grid-row: 1/3;
+        width: 98%;
+        /* grid-column: 1/5;
+        grid-row: 1/3; */
     }
 
     #placeName {
@@ -1309,10 +1410,9 @@ footer {
     #Acc_TextOne ,#Acc_TextTwo, #Acc_TextThree {
         font-size: 0.9rem;
     }
-
     #googleMap {
         height: 6rem;
-        width: 15rem;
+        width: 80%;
     }
 
     #footerdiv {
@@ -1338,9 +1438,60 @@ footer {
     #footerImg {
         display: none;
     }
+    /* -------------------img details popup-------------- */
+    #popUp{
+        width: 90%;
+    }
+    /* --------------img details-------------- */
+    #detailsPopup{
+        width: 90%;
+    }
+    #mainImgPopup{
+        width: 100%;
+    }
+    #grid_adjust{
+        flex-direction: column;
+    }
+    #close_btn{
+        padding: 1px 4px;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    #close_btn i{
+        font-size: 0.7rem;
+    }
+    #PlaceName{
+        font-size: 1.2rem;
+    }
+    #aboutPlace{
+        font-size:0.7rem;
+    }
 
-    #popUp {
-        width: 70%;
+    #Img_popup{
+        width: 40%;
+    }
+    /* ---------------input err popup----------------- */
+    #Error_popup{
+        width: 50%;
+    }
+    #ErrorIcon{
+        width: 5rem;
+        height:5rem;
+    }
+    #ErrorIcon:hover{
+        border: 3px red solid;
+    }
+    #ErrorIcon i{
+        font-size: 3rem;
+    }
+    #Message{
+        font-size: 1.3rem;
+    }
+    #errorDesc{
+        padding-bottom:0.7rem;
+    }
+    #CloseErr{
+        font-size: 0.9rem;
     }
 
 }
@@ -1462,9 +1613,13 @@ footer {
     #carouselExampleIndicators3 {
         padding: 0px 5px;
     }
-
+    .row{
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
     .card {
-        width: 6rem;
+        width: 7.5rem;
         position: relative;
         top: 50%;
         left: 50%;
@@ -1492,11 +1647,11 @@ footer {
     }
 
     .placePhoto {
-        height: 4.5rem;
+        height: 5rem;
     }
 
     .placeText {
-        font-size: 0.4rem;
+        font-size: 0.5rem;
     }
 
     .placeDescription {
@@ -1506,14 +1661,19 @@ footer {
     .explorebtn {
         font-size: 0.5rem;
     }
-
+    #gridDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     #popUpImg {
-        display: none;
+        width: 75%;
+        height: 8.5rem;
     }
 
     #placeDetails {
-        grid-column: 1/5;
-        grid-row: 1/3;
+        width: 98%;
     }
 
     #placeName {
@@ -1538,7 +1698,7 @@ footer {
 
     #googleMap {
         height: 6rem;
-        width: 10rem;
+        width: 90%;
     }
     #closePopUp {
         padding: 3px 4px;
@@ -1571,6 +1731,61 @@ footer {
 
     #footerImg {
         display: none;
+    }
+    /* -------------------img details popup-------------- */
+    #popUp{
+        width: 90%;
+    }
+    /* --------------img details-------------- */
+    #detailsPopup{
+        width: 90%;
+    }
+    #mainImgPopup{
+        width: 100%;
+    }
+    #grid_adjust{
+        flex-direction: column;
+    }
+    #close_btn{
+        padding: 1px 4px;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    #close_btn i{
+        font-size: 0.7rem;
+    }
+    #PlaceName{
+        font-size: 1.2rem;
+    }
+    #aboutPlace{
+        font-size:0.7rem;
+    }
+
+    #Img_popup{
+        width: 35%;
+    }
+    /* ---------------input err popup----------------- */
+    #Error_popup{
+        width: 60%;
+    }
+    #ErrorIcon{
+        width: 4rem;
+        height:4rem;
+    }
+    #ErrorIcon:hover{
+        border: 2.5px red solid;
+    }
+    #ErrorIcon i{
+        font-size: 2.5rem;
+    }
+    #Message{
+        font-size: 1.1rem;
+    }
+    #errorDesc{
+        padding-bottom:0.6rem;
+    }
+    #CloseErr{
+        font-size: 0.9rem;
     }
 
 }
@@ -1696,7 +1911,7 @@ footer {
         width: 50%;
         padding-bottom: 1rem;
     }
-
+    
     #Insiteplaces,
     #OutSkirts,
     #restaurants {
@@ -1708,9 +1923,13 @@ footer {
     #carouselExampleIndicators3 {
         padding: 0px 5px;
     }
-
+    .row{
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
     .card {
-        width: 5rem;
+        width: 6rem;
         position: relative;
         top: 50%;
         left: 50%;
@@ -1742,7 +1961,7 @@ footer {
     }
 
     .placeText {
-        font-size: 0.4rem;
+        font-size: 0.5rem;
     }
 
     .placeDescription {
@@ -1750,11 +1969,21 @@ footer {
     }
 
     .explorebtn {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
+    }
+    #gridDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #popUpImg {
+        width: 80%;
+        height: 7rem;
     }
 
-    #popUpImg {
-        display: none;
+    #placeDetails {
+        width: 98%;
     }
 
     #placeDetails {
@@ -1784,7 +2013,7 @@ footer {
 
     #googleMap {
         height: 6rem;
-        width: 10rem;
+        width: 95%;
     }
     #closePopUp {
         padding: 3px 4px;
@@ -1819,6 +2048,62 @@ footer {
     #footerImg {
         display: none;
     }
+    /* -------------------img details popup-------------- */
+    #popUp{
+        width: 90%;
+    }
+    /* --------------img details-------------- */
+    #detailsPopup{
+        width: 90%;
+        padding: 4px;
+    }
+    #mainImgPopup{
+        width: 100%;
+    }
+    #grid_adjust{
+        flex-direction: column;
+    }
+    #close_btn{
+        padding: 1px 4px;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    #close_btn i{
+        font-size: 0.7rem;
+    }
+    #PlaceName{
+        font-size: 1rem;
+    }
+    #aboutPlace{
+        font-size:0.7rem;
+        width: 98%;
+    }
 
+    #Img_popup{
+        width: 35%;
+    }
+    /* ---------------input err popup----------------- */
+    #Error_popup{
+        width: 60%;
+    }
+    #ErrorIcon{
+        width: 4rem;
+        height:4rem;
+    }
+    #ErrorIcon:hover{
+        border: 2.5px red solid;
+    }
+    #ErrorIcon i{
+        font-size: 2.5rem;
+    }
+    #Message{
+        font-size: 1.1rem;
+    }
+    #errorDesc{
+        padding-bottom:0.6rem;
+    }
+    #CloseErr{
+        font-size: 0.9rem;
+    }
 
 }

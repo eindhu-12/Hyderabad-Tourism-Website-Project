@@ -1,5 +1,10 @@
 header {
-    background-color: #A7BEAE;
+    /* background-color: #A7BEAE; */
+    /* background-color: #289f67; */
+    /* background-color: #878672; */
+    /* background-color: #558B71; */
+    background-color: #93B1B5;
+
     width: 100%;
     height: 4rem;
     display: flex;
@@ -10,7 +15,6 @@ header {
 #titlediv {
     display: flex;
     align-items: center;
-
 }
 
 #iconimg {
@@ -23,12 +27,12 @@ header {
     font-size: 2.5rem;
     font-family:"Trirong", serif;
     font-weight: 500;
-    color: black;
+    color: rgb(2, 2, 2);
     padding-left: 8px;
 
 }
 #title:hover{
-    background-image: linear-gradient(to right, red, blue, green);
+    background-image: linear-gradient(to right,yellow, red,yellow, red,yellow, red  );
     background-clip: text;
     color: transparent;
 }
@@ -42,7 +46,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid black;
 }
 
 #searchbtn {
@@ -61,7 +65,7 @@ header {
     align-items: center;
     width: 2rem;
     height: 2rem;
-    background-color: #A7BEAE;
+    background-color: #93B1B5;
     color: white;
     border-radius: 50%;
     cursor: pointer;
@@ -73,13 +77,13 @@ header {
     color: black;
     font-size: 0.8rem;
     padding: 0.5rem;
-    border-radius: 30px;
+    border-radius:45%;
     font-family:"Trirong", serif;
 
 }
 
 #signIN:hover {
-    background-color: #A7BEAE;
+    background-color: #93B1B5;
     color: white;
 }
 
@@ -679,7 +683,11 @@ header {
 /* ---------------------------------------Footer---------------------------------------- */
 footer {
     height: 10rem;
-    background-color: #A7BEAE;
+    /* background-color: #A7BEAE; */
+    /* background-color: #289f67; */
+    /* background-color: #878672; */
+    /* background-color: #558B71; */
+    background-color: #93B1B5;
     align-content: center;
     font-family:"Trirong", serif;
     color: black;
@@ -1019,7 +1027,6 @@ footer {
     }
 
     header {
-        background-color: #A7BEAE;
         width: 100%;
         height: 4rem;
         display: flex;
@@ -1275,7 +1282,6 @@ footer {
     }
 
     header {
-        background-color: #A7BEAE;
         width: 100%;
         height: 4rem;
         display: flex;
@@ -1497,7 +1503,7 @@ footer {
 
 }
 
-@media screen and (min-width:375px)and (max-width:426px) {
+@media screen and (min-width:375px)and (max-width:427px) {
     #titlediv {
         width: 15rem;
 

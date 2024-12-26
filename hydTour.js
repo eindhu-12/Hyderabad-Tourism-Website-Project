@@ -25,7 +25,7 @@ document.getElementById("searchbtn").addEventListener("keydown", (event) => {
     }
 });
 
-function performSearch() {
+function performSearch() {  
     const searchQuery = document.getElementById("searchbtn").value.trim().toLowerCase();
 
     const places = {
@@ -75,6 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("loginForm");
     const signUpLink = document.getElementById("signIn_to_SignUp");
     const signUpForm = document.getElementById("formValid");
+
+
+    let err_block=document.getElementById("Error_popup"); //error popups
+    let Err_icon=document.getElementById("ErrorIcon");
+    let Msg=document.getElementById("Message");
+    let ErrDescrip=document.getElementById("errorDesc")
 
     loginFormContainer.style.display = "none";
     signUpFormContainer.style.display = "none";
@@ -202,10 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // --------------------------Login Form---------------------------------------
 
-    let err_block=document.getElementById("Error_popup");
-    let Err_icon=document.getElementById("ErrorIcon");
-    let Msg=document.getElementById("Message");
-    let ErrDescrip=document.getElementById("errorDesc")
+    
     if (loginForm) {
         loginForm.addEventListener("submit", (event) => {
             event.preventDefault();

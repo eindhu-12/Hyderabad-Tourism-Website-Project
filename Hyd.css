@@ -190,11 +190,12 @@ header {
     box-shadow: 4px 4px 8px lightblue;
 } */
 .placeText {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 500;
     /* font-family: sans-serif; */
     font-family:"Trirong", serif;
     padding: 2px 0px;
+    color: black;
 }
 
 .placePhoto {
@@ -730,7 +731,7 @@ footer {
 }
 
 #footertitle:hover {
-    background-image: linear-gradient(to right, red, blue, green);
+    background-image: linear-gradient(to right,yellow, red,yellow, red,yellow, red);
     background-clip: text;
     color: transparent;
 }

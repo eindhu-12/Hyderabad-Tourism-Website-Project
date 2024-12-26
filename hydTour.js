@@ -14,6 +14,11 @@ const randomquotes = Math.floor(Math.random() * quotesHYD.length);
 const randomColor = Math.floor(Math.random() * quoteColor.length);
 oneQuote.textContent=quotesHYD[randomquotes];
 oneQuote.style.color=quoteColor[randomColor];
+
+let description_box=document.getElementById("hydContentinner");
+let description_color=["black","green","#0B3e33","#365E32","#800000"]
+const desc_color=Math.floor(Math.random() *description_color.length)
+description_box.style.color=description_color[desc_color];
 // ----------------------------------------------search-------------------------
 document.getElementById("searchicon").addEventListener("click", () => {
     performSearch();
@@ -180,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 tick_sbl=document.getElementById("tick");
                 tick_sbl.style.color="green",
                 
-                Msg.textContent="SignUp Suceesful"  ;
+                Msg.textContent="You have successfully Signed Up"  ;
                 ErrDescrip.textContent="Redirecting to LogIn Page"
 
                 signUpFormContainer.style.display = "none";
@@ -226,8 +231,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 tick_sbl=document.getElementById("tick");
                 tick_sbl.style.color="green",
                 
-                Msg.textContent="Login Suceesful"  ;
-                ErrDescrip.textContent="Invalid credentials! Please try again";
+                Msg.textContent="You have successfully Logged in"  ;
+                ErrDescrip.textContent="Redirecting to the website...";
                 loginFormContainer.style.display = "none";
                 document.body.style.overflow="auto";
                 formBlock=true;

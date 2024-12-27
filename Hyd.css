@@ -75,9 +75,9 @@ header {
 #signIN {
     background-color: white;
     color: black;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0.5rem;
-    border-radius:45%;
+    border-radius:25%;
     font-family:"Trirong", serif;
 
 }

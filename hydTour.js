@@ -89,33 +89,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loginFormContainer.style.display = "none";
     signUpFormContainer.style.display = "none";
+    
+    let loggedIn=localStorage.getItem("loggedIn");
+    if(!loggedIn || loggedIn === "false" ){
+        setTimeout(()=>{
+            loginFormContainer.style.display="block"
+            signUpFormContainer.style.display="none"
+            document.body.style.overflow="hidden";
 
-    // if(!loggedIn){
-    //     setTimeout(()=>{
-    //         loginFormContainer.style.display="block"
-    //         signUpFormContainer.style.display="none"
-    //         document.body.style.overflow="hidden";
-    //     },20000)
-    // }
+            localStorage.setItem("loggedIn", "true");
+        },5000)
+    }
+    if(loggedIn==="true"){
+        signInButton.textContent="Sign Out"
+    }
 
-    signInButton.addEventListener("click", () => {  //display Login
+    
+    signInButton.addEventListener("click", () => {  //display Loginbtn 
         if(signInButton.textContent==="Sign Out"){
             signInButton.textContent="Sign In"
+            loginFormContainer.style.display = "none";
+            localStorage.setItem("loggedIn", "false");
         }
         else{
-            let loggedIn=localStorage.getItem("loggedIn");
             loginFormContainer.style.display = "block";
             signUpFormContainer.style.display = "none";
             document.body.style.overflow="hidden";          //scrolling stops
         }
     });
 
-    signUpLink.addEventListener("click", (event) => {//display signUp
+    signUpLink.addEventListener("click", (event) => {      //display signUp
         event.preventDefault();
         loginFormContainer.style.display = "none";
         signUpFormContainer.style.display = "block";
     });
-    formBlock=false;
     if (signUpForm) {
         signUpForm.addEventListener("submit", (event) => {                  //signUp
             event.preventDefault();

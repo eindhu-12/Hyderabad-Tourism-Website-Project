@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow="hidden";
 
             localStorage.setItem("loggedIn", "true");
-        },5000)
+        },15000)
     }
     if(loggedIn==="true"){
         signInButton.textContent="Sign Out"

@@ -82,13 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signUpForm = document.getElementById("formValid");
     const guestLogin=document.getElementById("guestllogin");
 
-    guestLogin.addEventListener("click", (event) => {      //display signUp
-        event.preventDefault();
-        loginFormContainer.style.display = "none";
-        signUpFormContainer.style.display = "none";
-        signInButton.textContent="Sign Out"
-
-    });
+    
 
     let err_block=document.getElementById("Error_popup"); //error popups
     let Err_icon=document.getElementById("ErrorIcon");
@@ -99,6 +93,16 @@ document.addEventListener("DOMContentLoaded", () => {
     signUpFormContainer.style.display = "none";
     
     let loggedIn=localStorage.getItem("loggedIn");
+    guestLogin.addEventListener("click", (event) => {      //guest loggin
+        event.preventDefault();
+        loginFormContainer.style.display = "none";
+        signUpFormContainer.style.display = "none";
+        signInButton.textContent="Sign Out"
+        localStorage.setItem("loggedIn", "true");
+
+    });
+
+
     if(!loggedIn || loggedIn === "false" ){
         setTimeout(()=>{
             loginFormContainer.style.display="block"

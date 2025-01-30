@@ -80,7 +80,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("loginForm");
     const signUpLink = document.getElementById("signIn_to_SignUp");
     const signUpForm = document.getElementById("formValid");
+    const guestLogin=document.getElementById("guestllogin");
 
+    guestLogin.addEventListener("click", (event) => {      //display signUp
+        event.preventDefault();
+        loginFormContainer.style.display = "none";
+        signUpFormContainer.style.display = "none";
+        signInButton.textContent="Sign Out"
+
+    });
 
     let err_block=document.getElementById("Error_popup"); //error popups
     let Err_icon=document.getElementById("ErrorIcon");

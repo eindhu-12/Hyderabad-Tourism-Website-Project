@@ -447,6 +447,12 @@ header {
     color: skyblue;
 }
 
+#guestllogin{
+    text-decoration: none;
+}
+#guestllogin :hover{
+    color: skyblue;
+}
 /* --------------------------------------------POPUP---------------------------------------------- */
 
 .hidden {
